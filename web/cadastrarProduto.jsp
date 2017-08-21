@@ -14,41 +14,29 @@
     <body>
         <jsp:include page="home.jsp"></jsp:include>
         <div  id="interface">     
-            <form action="salvarProduto.jsp" method = "post">
-                <table border = "0" align = "center" bgcolor="#d5e8f9">    
+                <table border = "0" align = "center"  bgcolor="#FFE4C4" width="20%">   
+                    <form action="salvarProduto.jsp" method = "post">
                     <tr>
                         <th>Cadastro De Produto</th>
                     </tr>
-                        <tr>
-                            <th><br>Codigo</th>
-                        </tr>
-                        <tr>
-                            <th><input type="text" name="codigo" required=""></th>
-                        </tr> 
-                        <tr>
-                            <th>Descricao</th>
-                        </tr>                     
-                        <tr>
-                            <th><input type="text" name="nome" required=""></th>
-                        </tr>
-                        <tr>
-                            <th>Quantidade</th>
-                        </tr>
-                        <tr>
-                            <th><input type="text" name="quantidade" maxlength="30" required=""></th>
-                        </tr>
-                        <tr>
-                            <th>Preco</th>
-                        </tr>
-                        <tr>
-                            <th><input type="text" name="preco" maxlength="20" required=""><br><br></th>
-                        </tr>
+                    <tr>
+                            <td><b>Codigo: <input type="text" name="codigo" required="required"></td><br>
+                    </tr>
+                    <tr>
+                        <td><b>Descricao: <input type="text" name="nome" required="required"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Quantidade: <input type="text" name="quantidade" maxlength="30" required="required"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Preco: <input type="text" name="preco" maxlength="20" required="required"><br><br></td>
+                    </tr>
 
                         <tr>
                             <th><input type="submit" name="cadastrar" value="Cadastrar"></th>
                         </tr>
+                        </form>
                 </table>  
-            </form>
             <br><br>
         </div>    
     </body>

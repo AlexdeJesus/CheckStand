@@ -19,49 +19,32 @@
         %>
          <div  id="interface">
             <form action = "UsuarioControllador?acao=alterar" method = "post">                 
-                    <table align = "center" bgcolor="#d5e8f9">
+                    <table align = "center" bgcolor="#FFE4C4" width="20%">
                         <tr>
                             <th>Alterar Cadastro<br></th>
                         </tr>
                     <input type="hidden" name ="acao" value="salvar">
                     <tr>
-                        <th><label>Id</label></th>
+                        <td><b>Id: <input type="text" name = "id" value = "<%=usuario.getId()%>" readonly="readonly"></td>
                     </tr>
                     <tr>
-                        <th><input type="text" name = "id" value = "<%=usuario.getId()%>"></th>
+                        <td><b>Nome: <input type = "text" name = "nome" value = "<%=usuario.getNome()%>"></td>
                     </tr>
                     <tr>
-                        <th><label>Nome</label></th>
+                        <td><b>Login: <input type="text" name = "login" value="<%=usuario.getLogin()%>"></td>
                     </tr>
                     <tr>
-                        <th><input type = "text" name = "nome" value = "<%=usuario.getNome()%>"></th>
+                        <td><b>Senha: <input type = "password" name = "senha" value="<%=usuario.getSenha()%>"></td>
                     </tr>
                     <tr>
-                        <th><label>Login</label></th><br>
+                        <td><b>Matricula: <input type="text" name="matricula" value = "<%=usuario.getMatricula()%>"><br></td>
                     </tr>
                     <tr>
-                        <th><input type="text" name = "login" value="<%=usuario.getLogin()%>"></th><br>
+                        <td><b>Perfil: <input type="text" name="perfil" value = "<%=usuario.getPerfil()%>"><br></td>
+                   
                     </tr>
                     <tr>
-                        <th><label>Senha</label></th>
-                    </tr>
-                    <tr>
-                        <th><input type = "password" name = "senha" value="<%=usuario.getSenha()%>"></th>
-                    </tr>
-                    <tr>
-                        <th><label>Matricula</label></th>
-                    </tr>
-                    <tr>
-                        <th><input type="text" name="matricula" value = "<%=usuario.getMatricula()%>"><br><br></th>
-                    </tr>
-                    <tr>
-                        <th><label>Perfil</label></th>
-                    </tr>
-                    <tr>
-                        <th><input type="text" name="perfil" value = "<%=usuario.getPerfil()%>"><br><br></th>
-                    </tr>
-                    <tr>
-                        <th><input type="submit" name="alterar" value = "Salvar"></th>
+                        <th><br><input type="submit" name="alterar" value = "Salvar"></th>
                     </tr>
                 </table>            
             </form>

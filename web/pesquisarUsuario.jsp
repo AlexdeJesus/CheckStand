@@ -15,14 +15,14 @@
          <jsp:include page="home.jsp"></jsp:include>
             <div  id="interface"> 
                 <form action="UsuarioControllador?acao=pesquisarUsuario" method="post">
-                    <table align="center" bgcolor="#d5e8f9">
+                    <table align="center" bgcolor="#FFE4C4">
                         <tr>
                             <th>PESQUISAR USUARIO<br><br></th>
                         </tr>
                         <tr>
                             <th>
                                 Matricula:
-                                <input type="text" name="matricula" value=""required=""maxlength=""><br><br>
+                                <input type="text" name="matricula" value=""required="required"maxlength=""><br><br>
                             </th>
                         </tr>
                         <tr>

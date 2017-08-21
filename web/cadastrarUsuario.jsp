@@ -12,49 +12,42 @@
         <title>Cadastrar Usuario</title>
     </head>
     <body>
-        <jsp:include page="home.jsp"></jsp:include>           
+        <jsp:include page="home.jsp"></jsp:include>     
            <div  id="interface">        
+                <table border = "0" align = "center"  bgcolor="#FFE4C4" width="20%">   
                 <form action="salvarUsuario.jsp" method = "post">
-                    <table border = "0" align = "center" bgcolor="#d5e8f9">    
+                    
                         <tr>
                             <th>Cadastro De Usuario</th>
                         </tr>
                         <tr>
-                            <th><br>Nome</th>
-                        </tr>
-                        <tr>
-                            <th><input type="text" name="nome" required=""></th>
+                            <td><b>Nome: <input type="text" name="nome" required="required"></td>                        
                         </tr> 
                         <tr>
-                            <th>Login</th>
-                        </tr>                     
-                        <tr>
-                            <th><input type="text" name="login" required=""></th>
+                            <td><b>Login: <input type="text" name="login" required="required"></td>
                         </tr>
                         <tr>
-                            <th>Senha</th>
+                            <td><b>Senha: <input type="password" name="senha" maxlength="30" required="required"></td>
                         </tr>
                         <tr>
-                            <th><input type="password" name="senha" maxlength="30" required=""></th>
-                        </tr>
-                        <tr>
-                            <th>Matricula</th>
-                        </tr>
-                        <tr>
-                            <th><input type="text" name="matricula" maxlength="20" required=""></th>
+                            <td><b>Matricula: <input type="text" name="matricula" maxlength="20" required="required"></td>
                          </tr>
                         <tr>
-                        <th><br><select name="perfil">
+                        <th><select name="perfil">
                              <option value="admin">Administrador</option>
                              <option value="passador">Passador</option> <br><br><br>
                          </select><br><br></th>
                         </tr>               
                         <tr>
                           <th><input type="submit" name="cadastrar" value="Cadastrar"></th>
+                        </tr> 
+                        <tr>
+                            <td>
+                                
+                            </td>
                         </tr>
-                    </table>                    
-                    <br><br><br><br>
-                </form>       
+                </form>      
+               </table>
             </div>
     </body>
 </html>

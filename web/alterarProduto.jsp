@@ -20,37 +20,25 @@
             %>
               
             <form action = "ProdutoControllador?acao=alterar" method = "post">                        
-                <table align = "center" bgcolor="#d5e8f9">
+                <table align = "center" bgcolor="#FFE4C4" width="20%">
                     <input type="hidden" name ="acao" value="salvar">
                     <tr>
                         <th>Alterar Produto<br></th>
                     </tr>
                     <tr>
-                        <th><label>Id</label><br></th>
+                        <td><b>Id: <input type="text" name = "id" value = "<%=produto.getId()%>"readonly="readonly"></td>
                     </tr>
                     <tr>
-                        <th><input type="text" name = "id" value = "<%=produto.getId()%>"></th>
+                        <td><b>Codigo: <input type = "text" name = "codigo" value = "<%=produto.getCodigo()%>"></td>
                     </tr>
                     <tr>
-                        <th><label>Codigo</label><br></th>                        
-                    <tr>
-                        <th><input type = "text" name = "codigo" value = "<%=produto.getCodigo()%>"></th>
+                        <td><b>Nome: <input type = "text" name = "nome" value = "<%=produto.getNome()%>"></td>
                     </tr>
                     <tr>
-                        <th><label>Nome</label><br></th>
-                    <tr>
-                        <th><input type = "text" name = "nome" value = "<%=produto.getNome()%>"></th>
+                        <td><b>Quantidade: <input type="text" name = "quantidade" value="<%=produto.getQuantidade()%>"></td>
                     </tr>
                     <tr>
-                        <th><label>Quantidade</label><br></th>
-                    <tr>
-                        <th><input type="text" name = "quantidade" value="<%=produto.getQuantidade()%>"></th>
-                    </tr>
-                    <tr>
-                        <th><label>Preço</label><br></th>
-                    </tr>
-                    <tr>
-                        <th><input type = "text" name = "preco" value="<%=produto.getPreco()%>"><br><br></th>
+                        <td><b>Preço: <input type = "text" name = "preco" value="<%=produto.getPreco()%>"><br><br></td>
                     </tr>
                     <tr>
                         <th><input type="submit" name="alterar" value = "Salvar"></th>

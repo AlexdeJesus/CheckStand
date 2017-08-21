@@ -12,31 +12,46 @@
         <link rel="stylesheet" type="text/css" href="estilo.css">
         <title>Home</title>
     </head>
-    <body>
-        
-        <div  id="interface">
-            <header id="cabecalho">               
-                <nav id="menu">
-                    <ul type="disc">
-                        <li> <a href="UsuarioControllador?acao=home">Home</a></li>
-                        <li> <a href="UsuarioControllador?acao=cadastro">Cadastrar Usuario</a></li>
-                        <li> <a href="UsuarioControllador?acao=lista">Listar Usuarios</a></li>  
-                        <li> <a href="UsuarioControllador?acao=pesquisarUsuario">Pesquisar Usuario</a></li>       
-                        <li> <a href="ProdutoControllador?acao=cadastrarProduto">Cadastrar Produto</a></li>       
-                        <li> <a href="ProdutoControllador?acao=listar">Listar Produtos</a></li>       
-                        <li> <a href="ProdutoControllador?acao=pesquisarProduto">Pesquisar Produto</a></li>
-                        <li> <a href="ProdutoControllador?acao=retiraProduto">Retirar Produto</a></li>    
-                        <li> <a href="AutenticacaoControllador?acao=sair">Sair</a></li>
-                        <br><br>
-                        <div align = "center"> 
-                            <%--    <%
+<body>  
+    <div id="interface">
+        <header id="cabecalho"> 
+            <nav id="menu">
+                <br>
+                <table border="0"  width="80%"  height="40" align="center" cellspacing="0">            
+                    <tr>
+                         <td width="50%" align="right" valign="baseline">
+                        <font color="blue" size="+3">Check Stand</font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><%for (int i=0;i<3;i++){%>
+                           <br>
+                        </td>   
+                           <%}%>    
+                     </tr>
+                    <tr>
+                        <td align="center" bgcolor="#ffcc99" height="30">
+                            <font size="3"color="#ffffff">
+                            &nbsp;&nbsp; <b><a href="UsuarioControllador?acao=home">Home</a>&nbsp; |
+                            &nbsp;<b><a href="UsuarioControllador?acao=cadastro">Cadastrar Colaborador</a>&nbsp; |
+                            &nbsp;<b><a href="UsuarioControllador?acao=lista">Listar</a>&nbsp; |
+                            &nbsp;<b><a href="UsuarioControllador?acao=pesquisarUsuario">Pesquisar</a>&nbsp; |
+                            &nbsp;<b><a  href="ProdutoControllador?acao=cadastrarProduto">Cadastrar Produto</a>&nbsp; |
+                            &nbsp;<b><a  href="ProdutoControllador?acao=listar">Listar</a>&nbsp; | 
+                            &nbsp;<b><a href="ProdutoControllador?acao=pesquisarProduto">Pesquisar</a>&nbsp;|
+                            &nbsp;<b><a href="ProdutoControllador?acao=retiraProduto">Retirar</a>&nbsp;|
+                            &nbsp;<b><a href="AutenticacaoControllador?acao=sair">Sair</a>&nbsp;&nbsp; 
+                        </td>
+                    </tr><%--  
+                    <div align = "center"> 
+                              <%
                                 Usuario usuarioAutenticar = (Usuario)session.getAttribute("usuarioAutenticar");
                                 out.print("Ola, seja bem vindo "+usuarioAutenticar.getNome()+"!");        
-                            %> --%>
-                        </div>
-                    </ul>                    
-                </nav>  
-            </header>
-        </div>
-    </body>
+                    </div>                        
+                    %> --%>
+                </table>
+            </nav>
+        </header>
+    </div>	                    
+</body>
 </html>

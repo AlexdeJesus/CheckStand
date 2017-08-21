@@ -15,13 +15,13 @@
         <jsp:include page="homePassador.jsp"></jsp:include>     
          <div  id="interface"> 
             <form action="ProdutoControllador?acao=retirarProdutoPassador" method="post">
-                <table align="center" bgcolor="#d5e8f9">
+                <table align="center" bgcolor="#ffcc99">
                     <tr>
                         <th>Retirar Produto<br><br></th>
                     </tr>            
                     <tr>
                         <th>Codigo:
-                            <input type="text" name="codigo" value=""required=""maxlength=""><br><br>
+                            <input type="text" name="codigo" value=""required="required"maxlength=""><br><br>
                         </th>
                     </tr>
                     <tr>

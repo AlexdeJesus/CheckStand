@@ -19,7 +19,7 @@
         %>
         <div  id="interface">
             <table border rules = cols align = "center">
-                    <tr bgcolor="#FFF8DC">
+                    <tr bgcolor="#ffcc99">
                         <th width = 150>MATRICULA</th>
                         <th width = 150>NOME</th> 
                         <th width = 100>LOGIN</th> 
@@ -28,7 +28,7 @@
                         <th width = 100>ALTERAR</th>
                     </tr>
 
-                    <tr bgcolor= #FFFFF0>    
+                    <tr bgcolor= "#FFE4C4">    
                         <th><%=usuario.getMatricula()%></th>
                         <th><%=usuario.getNome()%> </th> 
                         <th><%=usuario.getLogin()%> </th> 

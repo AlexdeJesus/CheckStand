@@ -12,25 +12,34 @@
         <title>CheckStand</title>
     </head>
     <body>
-         <%
-        for(int i = 0; i < 10; i++){                    
+        
+        <table border="0"  width="80%" align="center">            
+        <b><br<br><br>
+	<tr>
+		<td width="50%" align="right" valign="baseline" >
+                    <font color="blue" size="+3">Check Stand</font>
+                </td>
+        </tr>
+        </table>
+        <%
+            for(int i=0;i<9;i++){      
         %>
-            <br>
-        <%}%>        
+        <br>
+        <%}%>
         <form action="AutenticacaoControllador?acao=autenticacao" method = "post">
-            <table align = "center" bgcolor="#d5e8f9">    
+            <table align = "center" bgcolor="#ffcc99">    
                 <tr>
-                    <th><font size="4" color="#006600">Olá seja bem vindo!<br><br></th>
+                    <th><font size="4">Olá seja bem vindo!<br><br></th>
                 </tr>
                 <tr>
-                    <th><font color="009900" size="3">Login: <input type="text" name="login" required=""></th>
+                    <th><font size="3">Login: <input type="text" name="login" required="required"></th>
                 </tr>
                 <tr>
-                    <th><font color="009900" size="3">Senha: <input type="password" name="senha" maxlength="30" required=""></th>
+                    <th><font size="3">Senha: <input type="password" name="senha" maxlength="30" required="required"></th>
                 </tr> 
                                
                 <tr>
-                    <th><br>
+                    <th>
                        <select name="perfil"><br>
                             <option value="admin">Administrador</option>
                             <option value="passador">Passador</option> 

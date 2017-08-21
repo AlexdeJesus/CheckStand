@@ -19,7 +19,7 @@
         %> 
         <div  id="interface">
             <table border rules = cols align = "center">
-                    <tr bgcolor="#FFF8DC">                 
+                    <tr bgcolor="#ffcc99">                 
                     <th width = 150>Codigo Fornecedor</th> 
                     <th width = 150>Descrição</th> 
                     <th width = 150>Quantidade</th> 
@@ -28,7 +28,7 @@
                     <th width = 150>Alterar Dados</th>
                  </tr>
                  
-                 <tr bgcolor="#FFFFF0">                    
+                 <tr bgcolor="#FFE4C4">                    
                     <th><%=produto.getCodigo()%> </th> 
                     <th><%=produto.getNome()%> </th> 
                     <th><%=produto.getQuantidade()%></th> 

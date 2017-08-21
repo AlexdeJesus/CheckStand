@@ -20,7 +20,7 @@
                 List<Produto> lista = (List<Produto>)request.getAttribute("lista");
                 %>            
                 <table align="center" border rules = cols>
-                    <tr bgcolor="#FFE4C4">
+                    <tr bgcolor="#ffcc99">
                         <th width = 150>Codigo Fornecedor</th> 
                         <th width = 200>Descrição</th> 
                         <th width = 100>Quantidade</th> 
@@ -33,7 +33,7 @@
                     for(Produto produto : lista){                              
                     %>
 
-                    <tr bgcolor="#FFF8DC">
+                    <tr bgcolor="#FFE4C4">
                         <th><%=produto.getCodigo ()%></th>
                         <th><%=produto.getNome ()%></th>
                         <th><%=produto.getQuantidade ()%></th>

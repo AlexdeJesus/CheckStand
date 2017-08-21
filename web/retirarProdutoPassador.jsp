@@ -20,25 +20,25 @@
        <div  id="interface"> 
             <form action="ProdutoControllador?acao=retirandoProdutoPassador" method="post"> 
                 <table border rules = cols align = "center">
-                    <tr bgcolor="#FFF8DC">
+                    <tr bgcolor="#ffcc99">
                         <th>Id</th>
                         <th>Codigo Fornecedor</th> 
                         <th>Descricao</th>
                         <th>Quantidade</th> 
                         <th>Preco</th>
                     </tr> 
-                    <tr bgcolor= #FFFFF0> 
-                        <th><input type="text" name="id" value = "<%=produto.getId()%>"></th>
-                        <th><input type="text" name="codigo" value = "<%=produto.getCodigo()%>"></th>         
-                        <th><input type="text" name="nome" value ="<%=produto.getNome()%>"></th>                          
-                        <th><input type="text" name="quantidade" value ="<%= produto.getQuantidade()%>"></th>               
-                        <th><input type="text" name="preco" value ="<%=produto.getPreco()%>"></th><br><br>
+                    <tr bgcolor= #FFE4C4> 
+                        <th><input type="text" name="id" value = "<%=produto.getId()%>" readonly="readonly"></th>
+                    <th><input type="text" name="codigo" value = "<%=produto.getCodigo()%>"readonly="readonly"></th>         
+                    <th><input type="text" name="nome" value ="<%=produto.getNome()%>" readonly="readonly"></th>                          
+                    <th><input type="text" name="quantidade" value ="<%= produto.getQuantidade()%>" readonly="readonly"></th>               
+                    <th><input type="text" name="preco" value ="<%=produto.getPreco()%>" readonly="readonly"></th><br><br>
                     </tr>
                 </table>
                     <br><br>
                     <div align="center">
-                       Matricula:  <input type="text" value="" name="matricula" required=""maxlength="">
-                       Quantidade: <input type="text" value="" name="retirarQuantidade"required="" maxlength=""><br><br>
+                       Matricula:  <input type="text" value="" name="matricula" required="required"maxlength="">
+                       Quantidade: <input type="text" value="" name="retirarQuantidade"required="required" maxlength=""><br><br>
                        <input type="submit" value="Retirar" name="retirar"> 
                     </div>   
             </form>

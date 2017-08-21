@@ -22,7 +22,7 @@
               List<Usuario> lista = (List<Usuario>)request.getAttribute("lista");
             %>  
             <table border rules = cols>
-                <tr bgcolor="#FFE4C4">
+                <tr bgcolor="#ffcc99">
                     <th width = 200>Nome</th> 
                     <th width = 150>Login</th> 
                     <th width = 100>Senha</th> 
@@ -35,7 +35,7 @@
                    for(Usuario usuario :lista){           
                  %>
                  
-                 <tr bgcolor= "#FFF8DC">
+                 <tr bgcolor= "#FFE4C4">
                     <th><%=usuario.getNome ()%></th>
                     <th><%=usuario.getLogin ()%></th>
                     <th><%=usuario.getSenha ()%></th>
