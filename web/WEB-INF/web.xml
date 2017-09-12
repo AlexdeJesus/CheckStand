@@ -4,9 +4,13 @@
         <filter-name>Filtro</filter-name>
         <filter-class>br.com.checkstand.controller.Filtro</filter-class>
     </filter>
+    <filter>
+        <filter-name>filtro</filter-name>
+        <filter-class>br.com.checkstand.controller.Filtro</filter-class>
+    </filter>
     <filter-mapping>
-        <filter-name>Filtro</filter-name>
-        <url-pattern>/*</url-pattern>
+        <filter-name>filtro</filter-name>
+        <url-pattern>/restrito/*</url-pattern>
     </filter-mapping>
     <servlet>
         <servlet-name>UsuarioControllador</servlet-name>

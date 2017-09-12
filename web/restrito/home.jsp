@@ -4,6 +4,7 @@
     Author     : Alex Souza
 --%>
 
+<%@page import="br.com.checkstand.bens.Usuario"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -42,13 +43,14 @@
                             &nbsp;<b><a href="ProdutoControllador?acao=retiraProduto">Retirar</a>&nbsp;|
                             &nbsp;<b><a href="AutenticacaoControllador?acao=sair">Sair</a>&nbsp;&nbsp; 
                         </td>
-                    </tr><%--  
-                    <div align = "center"> 
+                    </tr> 
+                    <div align = "center"> <b>
                               <%
                                 Usuario usuarioAutenticar = (Usuario)session.getAttribute("usuarioAutenticar");
-                                out.print("Ola, seja bem vindo "+usuarioAutenticar.getNome()+"!");        
+                                out.print("Olá, seja bem vindo "+usuarioAutenticar.getNome()+"!");        
+                              %> 
+
                     </div>                        
-                    %> --%>
                 </table>
             </nav>
         </header>

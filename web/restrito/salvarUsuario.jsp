@@ -20,20 +20,21 @@
         String senha = request.getParameter("senha");        
         String matricula = request.getParameter("matricula");
         String perfil = request.getParameter("perfil");
-       
+        
         Usuario usuario = new Usuario();
         usuario.setNome(nome);
         usuario.setLogin(login);
         usuario.setSenha(senha);
         usuario.setMatricula(matricula);
-        usuario.setPerfil(perfil);        
+        usuario.setPerfil(perfil);
+        
 
         UsuarioDao usuariodao = new UsuarioDao();
         Usuario user = usuariodao.buscarMatricula(usuario.getMatricula());      
         if(user == null){        
         usuariodao.cadastrar(usuario);        
         }
-        response.sendRedirect("cadastrarUsuario.jsp");
+        response.sendRedirect("../UsuarioControllador?acao=cadastro");
         %>
     </body>
 </html>

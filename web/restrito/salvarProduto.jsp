@@ -33,7 +33,7 @@
         if(prod == null){
         produtodao.cadastar(produto);
         }
-        response.sendRedirect("cadastrarProduto.jsp");
+        response.sendRedirect("../ProdutoControllador?acao=cadastrarProduto");
         %>
     </body>
 </html>

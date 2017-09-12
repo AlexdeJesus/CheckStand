@@ -55,7 +55,7 @@ public class AutenticacaoControllador extends HttpServlet {
                     HttpSession session = request.getSession();
                     session.setAttribute("usuarioAutenticar",usuarioAutenticar);//setar para usar no filtro de paginas
                    // session.setMaxInactiveInterval(3000);
-                    request.getRequestDispatcher("home.jsp").forward(request, response);
+                    request.getRequestDispatcher("restrito/home.jsp").forward(request, response);
                 }else if (usuarioAutenticar == null){
                     JOptionPane.showMessageDialog(null,"Usuario ou senha invalidos! Tente novamente! ");
                     request.getRequestDispatcher("index.jsp").forward(request, response);
@@ -73,8 +73,8 @@ public class AutenticacaoControllador extends HttpServlet {
                 Usuario usuarioAutenticar = usuariodao.autenticacao(usuario);
                 if(usuarioAutenticar != null){                    
                     HttpSession session = request.getSession();
-                    session.setAttribute("usuarioAtenticar",usuarioAutenticar);
-                    request.getRequestDispatcher("homePassador.jsp").forward(request, response);
+                    session.setAttribute("usuarioAutenticar",usuarioAutenticar);
+                    request.getRequestDispatcher("restrito/homePassador.jsp").forward(request, response);
                 }else if (usuarioAutenticar == null){
                     JOptionPane.showMessageDialog(null,"Usuario ou senha invalidos! Tente novamente! ");
                     request.getRequestDispatcher("index.jsp").forward(request, response);

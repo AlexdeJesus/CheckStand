@@ -28,13 +28,13 @@ public class ProdutoControllador extends HttpServlet {
         
         //Cadastrar 
         if (acao != null && acao.equals("cadastrarProduto")){
-            request.getRequestDispatcher("cadastrarProduto.jsp").forward(request, response);
+            request.getRequestDispatcher("restrito/cadastrarProduto.jsp").forward(request, response);
             
         //Listar
         }else if(acao != null && acao.equals("listar")){
             List<Produto> lista = produtodao.listar(produto);        
             request.setAttribute("lista", lista);
-            request.getRequestDispatcher("listarProduto.jsp").forward(request, response);  
+            request.getRequestDispatcher("restrito/listarProduto.jsp").forward(request, response);  
         
         //Excluir
         }else if (acao != null && acao.equals("excluir")){
@@ -48,23 +48,23 @@ public class ProdutoControllador extends HttpServlet {
             String id = request.getParameter("id");
             produto = produtodao.buscarId(Integer.parseInt(id));
             request.setAttribute("produto", produto);
-            request.getRequestDispatcher("alterarProduto.jsp").forward(request, response);
+            request.getRequestDispatcher("restrito/alterarProduto.jsp").forward(request, response);
         
         //Pesquisar Produto    
         }else if(acao != null && acao.equals("pesquisarProduto")){
-            request.getRequestDispatcher("pesquisarProduto.jsp").forward(request, response);
+            request.getRequestDispatcher("restrito/pesquisarProduto.jsp").forward(request, response);
        
         //Retira Produto    
         }else if(acao != null && acao.equals("retiraProduto")){
-            request.getRequestDispatcher("retiraProduto.jsp").forward(request, response);            
+            request.getRequestDispatcher("restrito/retiraProduto.jsp").forward(request, response);            
         
         //Pesquisar Produto Passador   
         }else if(acao != null && acao.equals("pesquisarProdutoPassador")){
-            request.getRequestDispatcher("pesquisarProdutoPassador.jsp").forward(request, response);
+            request.getRequestDispatcher("restrito/pesquisarProdutoPassador.jsp").forward(request, response);
         
         //Pesquisar Produto Passador 
         }else if(acao != null && acao.equals("retiraProdutoPassador")){
-            request.getRequestDispatcher("retiraProdutoPassador.jsp").forward(request, response);
+            request.getRequestDispatcher("restrito/retiraProdutoPassador.jsp").forward(request, response);
         }
     }
 
@@ -98,10 +98,10 @@ public class ProdutoControllador extends HttpServlet {
             produto = produtodao.buscarProduto(codigo);
             if(produto != null){
             request.setAttribute("produto", produto);
-            request.getRequestDispatcher("produtoEncontrado.jsp").forward(request, response);                
+            request.getRequestDispatcher("restrito/produtoEncontrado.jsp").forward(request, response);                
             }else if(produto == null){
                JOptionPane.showMessageDialog(null,"Produto não cadastrado! ");  
-               request.getRequestDispatcher("pesquisarProduto.jsp").forward(request, response);
+               request.getRequestDispatcher("restrito/pesquisarProduto.jsp").forward(request, response);
             }
             //Fim da acao pesquisarProduto
             
@@ -110,12 +110,12 @@ public class ProdutoControllador extends HttpServlet {
             produto = produtodao.buscarProduto(codigo);
             if(produto != null){
                 request.setAttribute("produto", produto);
-                request.getRequestDispatcher("retirarProduto.jsp").forward(request, response);                
+                request.getRequestDispatcher("restrito/retirarProduto.jsp").forward(request, response);                
                 
             }else if(produto == null ){
                  JOptionPane.showMessageDialog(null,"Produto Não Cadastrado! ");                   
             }
-            request.getRequestDispatcher("retiraProduto.jsp").forward(request, response);
+            request.getRequestDispatcher("restrito/retiraProduto.jsp").forward(request, response);
              
              //Fim da acao retirarProduto  
              
@@ -132,8 +132,7 @@ public class ProdutoControllador extends HttpServlet {
                 UsuarioDao usuariodao = new UsuarioDao();            
                 usuario = usuariodao.buscarUsuario(matricula); 
                 
-            if(usuario == null){                
-                JOptionPane.showMessageDialog(null,"Usuario Não Cadastrado!");  
+            if(usuario == null){                 
                 response.sendRedirect("ProdutoControllador?acao=retiraProduto");         
             }else if(usuario != null){
                 int qtd = Integer.parseInt(quantidade);
@@ -151,6 +150,15 @@ public class ProdutoControllador extends HttpServlet {
 
                 produtodao.alterarProdutoCodigo(produto);
                 response.sendRedirect("ProdutoControllador?acao=retiraProduto"); 
+                
+                
+                //Relatorios
+                request.setAttribute("matricula", matricula);
+                request.setAttribute("codigo",codigo);
+                request.setAttribute("nome", nome);
+                request.setAttribute("preco",preco);
+                request.setAttribute("quantidade", quantidade);
+                
             
                 }else{
                 JOptionPane.showMessageDialog(null, "Estoque Insuficiente! ");
@@ -165,10 +173,10 @@ public class ProdutoControllador extends HttpServlet {
             produto = produtodao.buscarProduto(codigo);
             if(produto != null){
             request.setAttribute("produto", produto);
-            request.getRequestDispatcher("produtoEncontradoPassador.jsp").forward(request, response);                
+            request.getRequestDispatcher("restrito/produtoEncontradoPassador.jsp").forward(request, response);                
             }else if(produto == null){
                JOptionPane.showMessageDialog(null,"Produto não cadastrado! ");  
-               request.getRequestDispatcher("pesquisarProdutoPassador.jsp").forward(request, response);
+               request.getRequestDispatcher("restrito/pesquisarProdutoPassador.jsp").forward(request, response);
             }
             //Fim da acao Pesquisar Produto Passador
             
@@ -178,12 +186,12 @@ public class ProdutoControllador extends HttpServlet {
             produto = produtodao.buscarProduto(codigo);
             if(produto != null){
                 request.setAttribute("produto", produto);
-                request.getRequestDispatcher("retirarProdutoPassador.jsp").forward(request, response);                
+                request.getRequestDispatcher("restrito/retirarProdutoPassador.jsp").forward(request, response);                
                 
             }else if(produto == null ){
                  JOptionPane.showMessageDialog(null,"Produto Não Cadastrado! ");                   
             }            
-             request.getRequestDispatcher("retiraProdutoPassador.jsp").forward(request, response);
+             request.getRequestDispatcher("restrito/retiraProdutoPassador.jsp").forward(request, response);
              
              //Fim da acao retirarProdutoPassador
              
@@ -201,7 +209,7 @@ public class ProdutoControllador extends HttpServlet {
                 usuario = usuariodao.buscarUsuario(matricula); 
                 
             if(usuario == null){                
-                JOptionPane.showMessageDialog(null,"Usuario Não Cadastrado!");  
+                //JOptionPane.showMessageDialog(null,"Usuario Não Cadastrado!");  
                 response.sendRedirect("ProdutoControllador?acao=retiraProdutoPassador");         
             }else if(usuario != null){
                 int qtd = Integer.parseInt(quantidade);//do banco

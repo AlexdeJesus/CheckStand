@@ -15,9 +15,9 @@
         <jsp:include page="home.jsp"></jsp:include>
         <div  id="interface">     
                 <table border = "0" align = "center"  bgcolor="#FFE4C4" width="20%">   
-                    <form action="salvarProduto.jsp" method = "post">
+                    <form action="restrito/salvarProduto.jsp" method = "post">
                     <tr>
-                        <th>Cadastro De Produto</th>
+                        <th>Cadastro De Produtos</th>
                     </tr>
                     <tr>
                             <td><b>Codigo: <input type="text" name="codigo" required="required"></td><br>

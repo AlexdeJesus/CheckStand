@@ -15,10 +15,10 @@
         <jsp:include page="home.jsp"></jsp:include>     
            <div  id="interface">        
                 <table border = "0" align = "center"  bgcolor="#FFE4C4" width="20%">   
-                <form action="salvarUsuario.jsp" method = "post">
+                <form action="restrito/salvarUsuario.jsp" method = "post">
                     
                         <tr>
-                            <th>Cadastro De Usuario</th>
+                            <th>Cadastro De Colaboradores</th>
                         </tr>
                         <tr>
                             <td><b>Nome: <input type="text" name="nome" required="required"></td>                        
@@ -27,10 +27,10 @@
                             <td><b>Login: <input type="text" name="login" required="required"></td>
                         </tr>
                         <tr>
-                            <td><b>Senha: <input type="password" name="senha" maxlength="30" required="required"></td>
+                            <td><b>Senha: <input type="password" name="senha" required="required"></td>
                         </tr>
                         <tr>
-                            <td><b>Matricula: <input type="text" name="matricula" maxlength="20" required="required"></td>
+                            <td><b>Matricula: <input type="text" name="matricula" required="required"></td>
                          </tr>
                         <tr>
                         <th><select name="perfil">

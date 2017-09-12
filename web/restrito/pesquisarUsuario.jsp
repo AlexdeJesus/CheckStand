@@ -22,7 +22,7 @@
                         <tr>
                             <th>
                                 Matricula:
-                                <input type="text" name="matricula" value=""required="required"maxlength=""><br><br>
+                                <input type="text" name="matricula" value=""required="required"><br><br>
                             </th>
                         </tr>
                         <tr>

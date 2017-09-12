@@ -30,9 +30,6 @@
                         </td>   
                         <%}%>
                     </tr>
-    <%--   <%
-    Usuario usuarioAutenticar = (Usuario)session.getAttribute("usuarioAtenticar");   
-    %> --%>
                     <tr>
                         <td align="center" height="30" bgcolor="#ffcc99">
                             <font size="3" color="#ffffff">
@@ -42,14 +39,14 @@
                             &nbsp; &nbsp; <b><a href="AutenticacaoControllador?acao=sair">Sair</a>&nbsp; &nbsp;
                         </td>
                     </tr>
-                     <%--
+                     
                     <div align = "center"> 
-                   
+                        <b>
                         <%
                         Usuario usuarioAutenticar = (Usuario)session.getAttribute("usuarioAutenticar");
-                        out.print("Ola, seja bem vindo "+usuarioAutenticar.getNome()+"!");        
+                        out.print("Olá, seja bem vindo "+usuarioAutenticar.getNome()+"!");        
                         %>
-                    </div> --%>
+                    </div>
                 </table>                 
             </nav>  
         </header>

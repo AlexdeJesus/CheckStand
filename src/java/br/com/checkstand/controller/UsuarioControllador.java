@@ -26,21 +26,21 @@ public class UsuarioControllador extends HttpServlet {
        
        //Home
        if(acao != null && acao.equals("home")){
-       request.getRequestDispatcher("home.jsp").forward(request, response);
+       request.getRequestDispatcher("restrito/home.jsp").forward(request, response);
        
        //Cadastro
        }else if(acao != null && acao.equals("cadastro")){
-            request.getRequestDispatcher("cadastrarUsuario.jsp").forward(request, response);         
+            request.getRequestDispatcher("restrito/cadastrarUsuario.jsp").forward(request, response);         
         
         //Lista
        }else if(acao != null && acao.equals("lista")){//Só vai listar os dados se acao = l na url
        List<Usuario>lista = usuariodao.listar(usuario);
        request.setAttribute("lista", lista);
-       request.getRequestDispatcher("listarUsuario.jsp").forward(request, response);
+       request.getRequestDispatcher("restrito/listarUsuario.jsp").forward(request, response);
        
        //Pesquisar Usuario
        }else if (acao != null && acao.equals("pesquisarUsuario")){
-        request.getRequestDispatcher("pesquisarUsuario.jsp").forward(request, response);
+        request.getRequestDispatcher("restrito/pesquisarUsuario.jsp").forward(request, response);
        
          //Excluir
        }else if (acao != null && acao.equals("excluir")){
@@ -54,11 +54,11 @@ public class UsuarioControllador extends HttpServlet {
         String id = request.getParameter("id");
         usuario = usuariodao.buscarId(Integer.parseInt(id));
         request.setAttribute("usuario", usuario);
-        request.getRequestDispatcher("alterarUsuario.jsp").forward(request, response);  
+        request.getRequestDispatcher("restrito/alterarUsuario.jsp").forward(request, response);  
            
         //Home Passador
         }else if(acao != null && acao.equals("homePassador")){
-        request.getRequestDispatcher("homePassador.jsp").forward(request, response); 
+        request.getRequestDispatcher("restrito/homePassador.jsp").forward(request, response); 
         }
     }
     
@@ -73,10 +73,9 @@ public class UsuarioControllador extends HttpServlet {
             Usuario usuario = usuariodao.buscarUsuario(matricula);
             if(usuario != null){
             request.setAttribute("usuario", usuario);
-            request.getRequestDispatcher("usuarioEncontrado.jsp").forward(request, response);
-            }else if(usuario == null){
-                JOptionPane.showMessageDialog(null,"Usuario Não Cadastrado! ");            
-                request.getRequestDispatcher("pesquisarUsuario.jsp").forward(request, response);
+            request.getRequestDispatcher("restrito/usuarioEncontrado.jsp").forward(request, response);
+            }else if(usuario == null){           
+                request.getRequestDispatcher("restrito/pesquisarUsuario.jsp").forward(request, response);
             }            
             //Fim da acao Pesquisar Usuario
             

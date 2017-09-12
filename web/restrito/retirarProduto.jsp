@@ -37,8 +37,8 @@
                 </table> 
                      <br><br>
                 <div align ="center">
-                    <b>Matricula:  <input type="text" value="" name="matricula" required="required"maxlength="">
-                    <b>Quantidade: <input type="text" value="" name="retirarQuantidade"required="required" maxlength=""><br><br>
+                    <b>Matricula:  <input type="text" value="" name="matricula" required="required">
+                    <b>Quantidade: <input type="text" value="" name="retirarQuantidade"required="required"><br><br>
                        <input type="submit" value="Retirar" name="retirar"> 
                 </div>
                 <br><br>
