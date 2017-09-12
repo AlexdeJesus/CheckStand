@@ -14,7 +14,7 @@
     <body>
         
         <table border="0"  width="80%" align="center">            
-        <b><br<br><br>
+        <b><br<br>
 	<tr>
 		<td width="50%" align="right" valign="baseline" >
                     <font color="blue" size="+3">Check Stand</font>
